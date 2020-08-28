@@ -1,0 +1,38 @@
+app_version: 1.0.0
+name: chat
+description: This is a chatapp
+
+contact_info:
+  name: "@frikkylikeme"
+  url: https://shuffler.io
+  email: frikky@shuffler.io
+
+actions:
+  - name: send
+    description: send a message
+    parameters:
+      - name: username
+        description: username
+        required: true
+        multiline: false
+        example: "wangwu"
+        schema:
+          type: string
+      - name: password
+        description: password
+        required: true
+        multiline: false
+        example: "123456"
+        schema:
+          type: string
+      - name: content
+        description: content of message
+        required: true
+        multiline: true
+        example: "This is my day. I get up at six o’clock. I brush my teeth and wash my face. I play the piano at half past six. I have breakfast at seven o’clock. I eat some cakes and an egg. I drink some milk. I like milk. I go to school at half past seven. I have Chinese, Maths, English. I like English best. I have lunch at twelve o’clock. I have rice, vegetables and meat. Sometimes I have watermelons. I like watermelons. I read books at four o’clock. I do my homework at six fifteen in the evening. I go to bed at eight. What a nice day!"
+        schema:
+          type: string
+    returns:
+      schema:
+        type: string
+large_image: data:image/jpg;base64,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
