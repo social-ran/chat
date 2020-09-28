@@ -45,7 +45,7 @@ class Chat(AppBase):
             '/html/body/div[1]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/button/span').click()
         time.sleep(5)
         browser.quit()
-        return "OK!!"
+        return "chat"
 
 
 if __name__ == "__main__":
