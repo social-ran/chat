@@ -10,7 +10,7 @@ class Chat(AppBase):
 
         super().__init__(redis, logger, console_logger)
 
-    async def send(self, username, password,content):
+    async def send(self, myurl,username, password,content):
         try:
             from selenium import webdriver
             from selenium.webdriver.common.keys import Keys
@@ -25,7 +25,7 @@ class Chat(AppBase):
         option.add_argument('--disable-dev-shm-usage')
         browser = webdriver.Chrome(chrome_options=option)
         # browser=webdriver.Chrome()
-        browser.get("http://10.245.142.98:81")
+        browser.get(myurl)#"http://10.245.142.98:81"
         browser.set_window_size(1920, 1080)
         browser.maximize_window()
 
