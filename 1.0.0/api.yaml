@@ -11,6 +11,13 @@ actions:
   - name: send
     description: send a message
     parameters:
+      - name: myurl
+        description: url
+        required: true
+        multiline: false
+        example: "http://10.245.142.98:81"
+        schema:
+          type: string
       - name: username
         description: username
         required: true
