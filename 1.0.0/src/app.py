@@ -10,7 +10,7 @@ class Chat(AppBase):
 
         super().__init__(redis, logger, console_logger)
 
-    async def send(self, myurl,username, password,content):
+    async def send(self, myurl,server_ip, username, password,content):
         try:
             from selenium import webdriver
             from selenium.webdriver.common.keys import Keys
@@ -34,7 +34,7 @@ class Chat(AppBase):
         browser.find_element_by_xpath('/html/body/div[1]/div/div[3]/div[3]/div/input').clear()
         browser.find_element_by_xpath('/html/body/div[1]/div/div[3]/div[3]/div/input').send_keys(password)
         browser.find_element_by_xpath('/html/body/div[1]/div/div[3]/div[4]/div/input').clear()
-        browser.find_element_by_xpath('/html/body/div[1]/div/div[3]/div[4]/div/input').send_keys('10.245.142.98')
+        browser.find_element_by_xpath('/html/body/div[1]/div/div[3]/div[4]/div/input').send_keys(server_ip)
         browser.find_element_by_xpath('/html/body/div[1]/div/div[3]/div[5]/button/span').click()
         time.sleep(2)
         browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/ul/li[4]/a/i').click()
