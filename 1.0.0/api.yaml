@@ -18,6 +18,13 @@ actions:
         example: "http://10.245.142.98:81"
         schema:
           type: string
+      - name: server_ip
+        description: server_ip
+        required: true
+        multiline: false
+        example: "101.200.151.183"
+        schema:
+          type: string
       - name: username
         description: username
         required: true
